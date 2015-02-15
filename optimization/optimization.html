@@ -1,0 +1,232 @@
+
+<!-- saved from url=(0042)http://www.seas.harvard.edu/courses/cs281/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+   <meta http-equiv="Pragma" content="no-cache">
+   <meta http-equiv="Expires" content="0">
+   <link href="./optimization/css" rel="stylesheet" type="text/css">
+   <link href="./optimization/style.css" rel="stylesheet" type="text/css">
+   <title>CS281: Advanced Machine Learning</title>
+ </head>
+ <body>
+   
+   <h1>Convex Optimization: algorithms and its applications</h1>
+   
+   <div id="header">
+     Reading Group, Spring 2015<br>
+   </div>
+   Feipeng Zhao<br>
+   Shanshan Zhang<br>
+   Chao Han<br>
+
+   <hr>
+
+   <span class="menu">
+     <a href="http://www.seas.harvard.edu/courses/cs281/files/syllabus.pdf">syllabus</a> |
+     <a href="http://www.seas.harvard.edu/courses/cs281/#schedule">schedule</a> | 
+     <a href="http://www.piazza.com/harvard/fall2013/cs281">piazza</a> |
+     <a href="http://www.seas.harvard.edu/courses/cs281/#assignments">assignments</a> | 
+     <a href="http://www.seas.harvard.edu/courses/cs281/#grading">grading</a> |
+     <a href="http://www.seas.harvard.edu/courses/cs281/#books">books</a> |
+     <a href="http://www.seas.harvard.edu/courses/cs281/#faq">faq</a> |
+     <a href="http://isites.harvard.edu/icb/icb.do?keyword=k98807&pageid=icb.page623774&pageContentId=icb.pagecontent1350015&state=maximize">dropbox</a> |
+     <a href="http://isites.harvard.edu/icb/icb.do?keyword=k98807&pageid=icb.page623774&pageContentId=icb.pagecontent1350016&state=maximize">quizzes</a>
+   </span>
+
+   <h3>Announcements</h3>
+
+   <ul>
+     <li>9 February 2015: The tentative reading schedule list is posted</li>
+     <li>9 February 2015: Setting up the web page for reading group</li>
+   </ul>
+
+   <hr>
+
+   <a name="schedule">
+   <h3>Schedule</h3>
+
+   Subject to change.
+
+   <div class="lecture">
+     <h4>Fundmentals</h4>
+
+     <span class="lecture-date">Thur 19 Feb 2015</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 2: Convex Sets</span>
+     [ <a href="http://web.stanford.edu/class/ee364a/lectures/sets.pdf">slide</a> | <a href="http://stanford.edu/class/ee364a/quizzes/sets.html">quiz</a> ]
+     <br><span class="presenter">Presenter: <b>Shanshan Zhang</b></span>
+     </p>
+     <div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Boyd -- Chapter 2 -- <i>Convex Sets</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 2, Section 2.3 -- <i>Probability Distributions</i></li>
+         <li>[<span class="optional">optional</span>] Note: David J.C. MacKay -- <a href="http://www.seas.harvard.edu/courses/cs281/papers/mackay-2006.pdf"><i>The Humble Gaussian Distribution</i></a>.</li>
+         <li>[<span class="optional">optional</span>] Note: Sam Roweis -- <a href="http://www.seas.harvard.edu/courses/cs281/papers/gaussian-identities.pdf"><i>Gaussian Identities</i></a>.</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://www.metacademy.org/graphs/concepts/multivariate_gaussian_distribution#lfocus=multivariate_gaussian_distribution">Multivariate Gaussian Distribution</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+   </div>
+     
+   <div class="lecture">
+     <h4>Deep Learning</h4>
+
+     <span class="lecture-date">Mon 25 Nov 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 22: Boltzmann Machines</span>
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 27, Section 27.7 -- <i>Latent Variable Models for Discrete Data</i></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 28, Section 28.1 -- <i>Deep Learning</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 31 -- <i>Ising Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 42 -- <i>Hopfield Networks</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 43 -- <i>Boltzmann Machines</i></li>
+         <li>[<span class="optional">optional</span>] Video: Geoffrey Hinton -- <a href="http://videolectures.net/mlss09uk_hinton_dbn/">Deep Belief Networks</a></li>
+         <li>[<span class="optional">optional</span>] Video: Marcus Frean -- <a href="http://videolectures.net/mlss2010au_frean_deepbeliefnets/">Restricted Boltzmann Machines and Deep Belief Networks</a></li>
+         <li>[<span class="optional">optional</span>] Video: Geoffrey Hinton -- <a href="http://videolectures.net/jul09_hinton_deeplearn/">A Tutorial on Deep Learning</a></li>
+         <li>[<span class="optional">optional</span>] Video: Yoshua Bengio and Yann LeCun -- <a href="http://videolectures.net/icml09_bengio_lecun_tldar/">Tutorial on Deep Learning Architectures</a></li>
+         <li>[<span class="optional">optional</span>] Video: Yann LeCun -- <a href="http://www.youtube.com/watch?v=3boKlkPBckA">Visual Perception with Deep Learning</a></li>
+
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Mon 2 Dec 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 23: Neural Networks</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&keyword=k98807&topicId=icb.topic1317659&pageContentId=icb.pagecontent1350016&pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F38#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li><span class="lecture-assign">Last Day for Assignment 4 Regrades</span></li>
+         <li><span class="lecture-assign">Assignment 5 Back</span></li>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 16, Section 16.5 -- <i>Adaptive Basis Function Models</i></li>
+         <li>[<span class="optional">optional</span>] Book: Bishop -- Chapter 5 -- <i>Neural Networks</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 39 -- <i>The Single Neuron as a Classifier</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 40 -- <i>Capacity of a Single Neuron</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 41 -- <i>Learning as Inference</i></li>
+         <li>[<span class="optional">optional</span>] Book: MacKay -- Chapter 44 -- <i>Supervised Learning in Multilayer Networks</i></li>
+         <li>[<span class="optional">optional</span>] Book: Hastie, Tibshirani, and Friedman -- Chapter 11 -- <i>Neural Networks</i></li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/feed_forward_neural_nets#lfocus=feed_forward_neural_nets">Feedforward Neural Networks</a></li>
+       </ul>
+     </div>
+     <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 4 Dec 2013</span>
+     <p class="lecture">
+     <span class="lecture-title">Lecture 24: Advanced Neural Networks</span>
+     [ <a href="http://isites.harvard.edu/icb/icb.do?state=edit&keyword=k98807&topicId=icb.topic1317659&pageContentId=icb.pagecontent1350016&pageid=icb.page.topiceditgeneral.icb.topic1317659.icb.page623774&panel=icb.pagecontent1350016%3Ar%2Fquiz%2Ftake%2F39#quizmo-icb.topic1317659">quiz</a> ]
+     </p><div class="lecture-prep">
+       <ul>
+         <li>[<span class="required">required</span>] Book: Murphy -- Chapter 28, Sections 28.3-28.5 -- <i>Deep Learning</i></li>
+         <li>[<span class="optional">optional</span>] Paper: Geoffrey E. Hinton, Simon Osindero and Yee Whye Teh. <i><a href="http://www.seas.harvard.edu/courses/cs281/papers/hinton-etal-2006.pdf">A Fast Learning Algorithm for Deep Belief Nets</a></i>. Neural Computation 18:1527-1554, 2006.</li>
+         <li>[<span class="optional">optional</span>] Metacademy: <a href="http://metacademy.org/graphs/concepts/convolutional_nets#lfocus=convolutional_nets">Convolutional Neural Networks</a></li>
+       </ul>
+     </div>
+     <p></p>
+   </div>
+   
+   <div class="lecture">
+
+       <span class="lecture-date">Thu 5 Dec 2013</span>
+       <p class="lecture-prep">
+         </p><ul>
+           <li><span class="lecture-assign">Final Project Poster Session</span></li>
+         </ul>
+       <p></p>
+
+     <hr width="80%">
+
+     <span class="lecture-date">Wed 11 Dec 2013</span>
+       <p class="lecture-prep">
+         </p><ul>
+           <li><span class="lecture-assign">Final Project Reports Due</span></li>
+           <li><span class="lecture-assign">Last Day for Assignment 5 Regrades</span></li>
+         </ul>
+       <p></p>
+   </div>
+
+   <hr>
+
+   <a name="assignments">
+   <h3>Assignments</h3> For the assignments, you'll get both a .tex
+   file and a .pdf.  You'll also need the class
+   file: </a><a href="http://www.seas.harvard.edu/courses/cs281/files/harvardml.cls">harvardml.cls</a>.  Examples of
+   usage: <a href="http://www.seas.harvard.edu/courses/cs281/files/example.tex">example.tex</a>, <a href="http://www.seas.harvard.edu/courses/cs281/files/example.pdf">example.pdf</a>, <a href="http://www.seas.harvard.edu/courses/cs281/files/example-fig.pdf">example-fig.pdf</a>.
+   <ul>
+     <li>Assignment 1: Out 6 September 2013; Due 20 September 2013 [ <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-1.pdf">assignment-1.pdf</a> | <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-1.tex">assignment-1.tex</a> ]<br>
+       <p>
+         <a name="jester">
+           <b>Jester Data:</b> 
+           These data are approximately 1.7 million ratings in the range
+           [-10,10] of 150 jokes from 63,974 users.  These data are from
+           the </a><a href="http://eigentaste.berkeley.edu/dataset/">Eigentaste
+             Project</a> at Berkeley.  I have munged the data somewhat, so use
+           the local copies here:
+           </p><ul>
+             <li><a href="http://www.seas.harvard.edu/courses/cs281/data/jester_ratings.dat.gz">jester_ratings.dat.gz</a>:
+               Each row is formatted as [User ID] [Joke ID] [Rating]</li>
+             <li><a href="http://www.seas.harvard.edu/courses/cs281/data/jester_items.dat.gz">jester_items.dat.gz</a>: Maps the joke IDs to the joke text.</li>
+             <li><a href="http://www.seas.harvard.edu/courses/cs281/data/jester_items.clean.dat.gz">jester_items.clean.dat.gz</a>: Maps the joke IDs to the joke text. (No punctuation, lowercased.)</li>
+             <li><a href="http://www.seas.harvard.edu/courses/cs281/data/jester_ratings_users.mat">jester_ratings_users.mat</a>: Ratings chopped up into a cell array with one entry per user.</li>
+             <li><a href="http://www.seas.harvard.edu/courses/cs281/data/jester_ratings_jokes.mat">jester_ratings_jokes.mat</a>: Ratings chopped up into a cell array with one entry per joke.</li>
+           </ul>
+           The correct reference for these data is Ken Goldberg,
+           Theresa Roeder, Dhruv Gupta and Chris
+           Perkins. <i>Eigentaste: A Constant Time Collaborative
+           Filtering Algorithm</i>. Information Retrieval
+           4(2):133-151,
+           2001. [<a href="http://www.seas.harvard.edu/courses/cs281/papers/goldberg-roeder-gupta-perkins-2001.pdf">pdf</a>]
+         
+       <p></p>
+     </li>
+     <li>Assignment 2: Out 21 September 2013; Due 4 October 2013 [ <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-2.pdf">assignment-2.pdf</a> | <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-2.tex">assignment-2.tex</a> ]<br>
+       <p>
+         <a name="spam">
+           <b>Spam Email Data:</b> These data are 3000 training and
+           1601 test emails.  Each has 57 features and a binary label
+           in the last column. You can read more about the
+           data </a><a href="http://www-stat.stanford.edu/~tibs/ElemStatLearn/datasets/spam.info.txt">here</a>.
+           </p><ul>
+             <li><a href="http://www.seas.harvard.edu/courses/cs281/data/spam.train.dat.gz">spam.train.dat.gz</a></li>
+             <li><a href="http://www.seas.harvard.edu/courses/cs281/data/spam.test.dat.gz">spam.test.dat.gz</a></li>
+           </ul>
+         
+       <p></p>
+     </li>
+     <li>Assignment 3: Out 4 October 2013; Due <del>18 October 2013</del> 20 October 2013 [ <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-3.pdf">assignment-3.pdf</a> | <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-3.tex">assignment-3.tex</a> ]<br>
+       <p>
+         Uses <a href="http://www.seas.harvard.edu/courses/cs281/#jester">Jester data</a> above.
+       </p>
+     </li>
+     <li>Assignment 4: Out 25 October 2013; Due 8 November 2013 [ <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-4.pdf">assignment-4.pdf</a> | <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-4.tex">assignment-4.tex</a> ] </li>
+     <li>Assignment 5: Out 8 November 2013; Due 22 November 2013 [<a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-5.pdf">assignment-5.pdf</a> | <a href="http://www.seas.harvard.edu/courses/cs281/files/assignment-5.tex">assignment-5.tex</a> ] </li>
+   </ul>
+
+   <hr>
+
+   <a name="books">
+     <h3>Related Resources</h3>
+     </a><ul><a name="books">
+       </a><li><a name="books"><b>Recommended:</b> Stephen Boyd, </a><a href="http://stanford.edu/~boyd/cvxbook/">Convex Optimization</a>, Cambridge University Press.</li>
+     </ul>
+   
+
+   <hr>
+   <a name="faq">
+     <h3>Frequently Asked Questions</h3>
+     </a><ul><a name="faq">
+   		<li><b>Where is this template from?</b> The web design is borrowed from <a href="http://www.seas.harvard.edu/courses/cs281/">CS281: Advanced Machine Learning</a>. Thanks to Prof.Ryan Adams. </li>
+       <li><b>What is this for?</b>  It's none of your fucking business</li>
+     </ul>
+   
+
+   
+
+ 
+
+<iframe frameborder="0" scrolling="no" style="border: 0px; display: none; background-color: transparent;"></iframe><div id="GOOGLE_INPUT_CHEXT_FLAG" input="" input_stat="{&quot;tlang&quot;:true,&quot;tsbc&quot;:true,&quot;pun&quot;:true,&quot;mk&quot;:false,&quot;ss&quot;:true}" style="display: none;"></div></body></html>
